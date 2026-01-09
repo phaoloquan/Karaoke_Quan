@@ -1,0 +1,8 @@
+{
+  "name": "Karaoke AI Pro",
+  "description": "Ứng dụng karaoke thông minh sử dụng AI để tách lời bài hát và hiển thị lyrics thời gian thực từ video clip.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

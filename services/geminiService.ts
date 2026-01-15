@@ -2,10 +2,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { LyricLine } from "../types";
 
-const API_KEY = process.env.API_KEY || "";
-
 export const getLyricsFromAudio = async (audioBase64: string): Promise<LyricLine[]> => {
-  const ai = new GoogleGenAI({ apiKey: API_KEY });
+  // Khởi tạo instance ngay trong hàm để đảm bảo luôn lấy được API_KEY mới nhất từ môi trường Netlify
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   
   try {
     const response = await ai.models.generateContent({
